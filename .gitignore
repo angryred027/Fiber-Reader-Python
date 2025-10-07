@@ -1,0 +1,14 @@
+*.nfc
+/venv/
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+.ipynb_checkpoints
+output/ 
+logs/
+data/
+models/
