@@ -22,7 +22,7 @@ def check_part_number(ascii_text, uid):
     return {"status": "no_match", "uid": uid, "ascii_text": ascii_text}
 
 if __name__ == "__main__":
-    file_path = "Blue_slix.nfc"
+    file_path = "Green.nfc"
     nfc_data = read_nfc(file_path)
     uid = nfc_data["uid"]
     hex_data = nfc_data["data_content"]
