@@ -50,7 +50,6 @@ class NFCViewer(tk.Tk):
         self.ref_label = tk.Label(frame, text="Detected REF: None", fg="blue")
         self.ref_label.pack(side="left", padx=10)
 
-        # Table
         cols = ("Block", "Hex", "ASCII", "BCD")
         self.tree = ttk.Treeview(self, columns=cols, show="headings")
         for c in cols:
@@ -72,7 +71,6 @@ class NFCViewer(tk.Tk):
             messagebox.showerror("Error", f"Failed to open file:\n{e}")
             return
 
-        # Extract "Data Content:" section if exists
         match = re.search(r"Data Content:\s*([0-9A-Fa-f\s]+)", content)
         hex_data = match.group(1) if match else content
         self.data = hex_to_bytes(hex_data)

@@ -12,7 +12,7 @@ def hex_to_ascii(hex_string):
 
 def check_part_number(ascii_text, uid):
     approved_parts = {
-        "AXR-1023": "E0 04 01 08 46 58 0F C8",  # Example UID
+        "AXR-1023": "E0 04 01 08 46 58 0F C8",
         "BGT-5500": "E0 04 01 08 12 34 56 78",
         "ZTR-9999": "E0 04 01 08 11 22 33 44"
     }
