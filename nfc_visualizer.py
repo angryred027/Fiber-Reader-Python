@@ -26,7 +26,6 @@ def is_printable_block(block):
 # Visualize parsed blocks in the scrollable UI
 # -------------------------------------------------
 def visualize(hex_data):
-    # Clear previous content
     for widget in frame.winfo_children():
         widget.destroy()
 
@@ -92,7 +91,6 @@ title_label.pack(pady=8)
 open_btn = tk.Button(root, text="Open .nfc File", command=open_file, bg="#4CAF50", fg="white", padx=10, pady=5)
 open_btn.pack(pady=5)
 
-# Scrolled container
 scroll_canvas = tk.Canvas(root)
 scrollbar = tk.Scrollbar(root, orient="vertical", command=scroll_canvas.yview)
 scroll_frame = tk.Frame(scroll_canvas)
@@ -108,7 +106,6 @@ scroll_canvas.configure(yscrollcommand=scrollbar.set)
 scroll_canvas.pack(side="left", fill="both", expand=True)
 scrollbar.pack(side="right", fill="y")
 
-frame = scroll_frame  # alias for visualization target
+frame = scroll_frame
 
-# Run UI
 root.mainloop()
